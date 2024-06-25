@@ -1,0 +1,7 @@
+http:
+  middlewares:
+    ${PROJECT_NAME}-strip-prefix:
+      stripPrefix:
+        prefixes:
+          - /iso_chatbot
+          - /app

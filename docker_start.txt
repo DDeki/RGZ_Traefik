@@ -1,0 +1,3 @@
+docker network create --driver bridge chatbot_pdfreader_network
+
+sudo docker-compose --env-file .env up -d
