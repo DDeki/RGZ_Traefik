@@ -3,5 +3,4 @@ http:
     strip-prefix:
       stripPrefix:
         prefixes:
-          - /iso_chatbot
-          - /app
+          - /notused
