@@ -8,5 +8,13 @@ providers:
   docker:
     exposedByDefault: false
 
+certificatesResolvers:
+  myresolver:
+    acme:
+      email: "${LETSENCRYPT_EMAIL}"
+      storage: "/letsencrypt/acme.json"
+      tlsChallenge: {}
+
 api:
   dashboard: true
+  insecure: true
