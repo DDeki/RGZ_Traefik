@@ -18,10 +18,10 @@ services:
       - "443:443"
       - "${TRAEFIK_DASHBOARD_PORT}:8080"
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./traefik/letsencrypt:/letsencrypt"
-      - "./traefik/traefik.yml:/etc/traefik/traefik.yml"
-      - "./traefik/dynamic.yml:/etc/traefik/dynamic/dynamic.yml"
+      - "./traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
+      - "./traefik/dynamic.yml:/etc/traefik/dynamic/dynamic.yml:ro"
     networks:
       - chatbot_pdfreader_network
     restart: unless-stopped

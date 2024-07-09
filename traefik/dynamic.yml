@@ -1,6 +1,1 @@
-http:
-  middlewares:
-    strip-prefix:
-      stripPrefix:
-        prefixes:
-          - /notused
+
