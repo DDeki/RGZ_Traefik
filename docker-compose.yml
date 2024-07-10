@@ -24,3 +24,4 @@ services:
 networks:
   chatbot_pdfreader_network:
     external: true
+    
