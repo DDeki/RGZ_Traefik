@@ -7,7 +7,7 @@ services:
       - "--api.insecure=${TRAEFIK_API_INSECURE}"
       - "--providers.docker=${TRAEFIK_PROVIDERS_DOCKER}"
       - "--entrypoints.web.address=${TRAEFIK_ENTRYPOINTS_WEB_ADDRESS}"
-      - "--entrypoints.web.forwardedheaders.trustedips=0.0.0.0/0"
+      - "--entrypoints.web.forwardedheaders.trustedips=${TRUSTED_IPS}"
       - "--entrypoints.web.forwardedheaders.insecure=true"
       - "--providers.file.directory=/etc/traefik/dynamic"
       - "--providers.file.watch=true"
@@ -18,10 +18,16 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./traefik/dynamic.yml:/etc/traefik/dynamic/dynamic.yml:ro"
     networks:
+      - chatbot_geolab_network
       - chatbot_pdfreader_network
+      - chatbot_poverenik_network
     restart: unless-stopped
 
 networks:
   chatbot_pdfreader_network:
+    external: true
+  chatbot_geolab_network:
+    external: true
+  chatbot_poverenik_network:
     external: true
     

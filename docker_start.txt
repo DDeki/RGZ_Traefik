@@ -1,3 +1,5 @@
 docker network create --driver bridge chatbot_pdfreader_network
+docker network create --driver bridge chatbot_geolab_network
+docker network create --driver bridge chatbot_poverenik_network
 
 sudo docker-compose --env-file .env up -d
