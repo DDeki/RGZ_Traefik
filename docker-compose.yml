@@ -21,6 +21,8 @@ services:
       - chatbot_geolab_network
       - chatbot_pdfreader_network
       - chatbot_poverenik_network
+      - portfolio-management-network
+      - legalizacija_ai_network
     restart: unless-stopped
 
 networks:
@@ -29,5 +31,9 @@ networks:
   chatbot_geolab_network:
     external: true
   chatbot_poverenik_network:
+    external: true
+  portfolio-management-network:
+    external: true
+  legalizacija_ai_network:
     external: true
     
