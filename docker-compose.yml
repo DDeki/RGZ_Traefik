@@ -23,6 +23,9 @@ services:
       - chatbot_poverenik_network
       - portfolio-management-network
       - legalizacija_ai_network
+      - chatbot_infocentar_rgz_network
+      - chatbot_admin_network
+      - chatbot_edu_rgz_network
     restart: unless-stopped
 
 networks:
@@ -36,4 +39,9 @@ networks:
     external: true
   legalizacija_ai_network:
     external: true
-    
+  chatbot_infocentar_rgz_network:
+    external: true
+  chatbot_admin_network:
+    external: true
+  chatbot_edu_rgz_network:
+    external: true
