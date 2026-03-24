@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   traefik:
-    image: traefik:v2.5
+    image: traefik:v2.11
     command:
       - "--api.insecure=${TRAEFIK_API_INSECURE}"
       - "--providers.docker=${TRAEFIK_PROVIDERS_DOCKER}"
