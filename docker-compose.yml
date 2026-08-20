@@ -24,6 +24,7 @@ services:
       - chatbot_infocentar_rgz_network
       - chatbot_admin_network
       - chatbot_edu_rgz_network
+      - knowledge_hub_network
     restart: unless-stopped
 
 networks:
@@ -42,4 +43,6 @@ networks:
   chatbot_admin_network:
     external: true
   chatbot_edu_rgz_network:
+    external: true
+  knowledge_hub_network:
     external: true
