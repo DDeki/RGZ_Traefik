@@ -25,6 +25,7 @@ services:
       - chatbot_admin_network
       - chatbot_edu_rgz_network
       - itsglobal_hub_network
+      - phoenix_network
     restart: unless-stopped
 
 networks:
@@ -45,4 +46,6 @@ networks:
   chatbot_edu_rgz_network:
     external: true
   itsglobal_hub_network:
+    external: true
+  phoenix_network:
     external: true
