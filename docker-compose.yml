@@ -16,6 +16,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./traefik/dynamic.yml:/etc/traefik/dynamic/dynamic.yml:ro"
     networks:
+      - chatbot_javnenabavke_network
       - chatbot_geolab_network
       - chatbot_pdfreader_network
       - chatbot_poverenik_network
@@ -29,6 +30,8 @@ services:
     restart: unless-stopped
 
 networks:
+  chatbot_javnenabavke_network:
+    external: true
   chatbot_pdfreader_network:
     external: true
   chatbot_geolab_network:
